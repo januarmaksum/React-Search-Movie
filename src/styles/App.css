@@ -1,0 +1,147 @@
+@import url(./Normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    font-family: 'Arimo', sans-serif;
+    letter-spacing: -.03em;
+    font-size: 16px;
+    margin: 0 auto;
+    background-color: #1d1d1d;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+}
+
+
+/**
+   * Header styles
+   */
+
+.nav-bar {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 8;
+    background: #1d1d1d;
+    overflow: hidden;
+    color: #919191;
+    border-bottom: 1px solid #2f2f2f;
+    backface-visibility: hidden;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-container {
+    max-width: 1170px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #6ac045;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.nav-search {
+    position: relative;
+}
+
+.nav-search>img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.nav-search-input {
+    width: 400px;
+    height: 35px;
+    font-size: .85em;
+    font-weight: bold;
+    color: #919191;
+    border: 2px solid #5a5a5a;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    padding: 4px 30px 4px 40px;
+    background-color: #1d1d1d;
+}
+
+.nav-search-input:focus {
+    outline: none;
+    border-color: #969696;
+    color: #fff;
+}
+
+
+/**
+   * Main content style
+   */
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap: 56px;
+    position: relative;
+    top: 120px;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.movie {
+    text-align: left;
+}
+
+.movie:hover .movie-item {
+    border-color: #6ac045;
+    cursor: pointer;
+}
+
+.movie:hover .movie-item>img {
+    opacity: .5;
+}
+
+.movie-item {
+    display: inline-block;
+    max-width: 250px;
+    border: 5px solid #fff;
+    transition: border .15s ease-in-out;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.movie-item>img {
+    display: block;
+    max-width: 100%;
+    transition: opacity .15s ease-in-out;
+}
+
+.movie-item-title {
+    margin: 0;
+    font-size: .95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-item-sub-title {
+    font-size: .85em;
+    color: #919191;
+}
+
+
+/**
+   * Modal content
+   */
+
