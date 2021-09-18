@@ -18,6 +18,7 @@ You will also see any lint errors in the console.
 - Search movies by keyword
 - Single Page for Single Movie Detail
 - Show Movie Poster in a popup modal window when image from the list is clicked
+- Mobile responsive
 
 ## Stack
 - ReactJS
