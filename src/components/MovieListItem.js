@@ -1,13 +1,16 @@
 import React from "react"
 
-export default function MovieListItem() {
+const MovieListItem = props => {
+    const { Title, Year, Poster, imdbID } = props.movie
     return (
-        <div className="movie">
+        <div className="movie" onClick={() => { props.onMovieSelect(imdbID); props.open(true) }}>
             <div className="movie-item">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="poster movie" />
+                <img src={Poster} alt={Title} />
             </div>
-            <h3 className="movie-item-title">Iron Man</h3>
-            <div className="movie-item-sub-title">2021</div>
+            <h3 className="movie-item-title">{Title}</h3>
+            <div className="movie-item-sub-title">{Year}</div>
         </div>
     )
 }
+
+export default MovieListItem
