@@ -29,6 +29,7 @@ body {
     height: 60px;
     display: flex;
     align-items: center;
+    padding: 0 15px;
 }
 
 .nav-bar-container {
@@ -215,7 +216,6 @@ body {
     margin: 10px 0px;
     line-height: 1.5;
     overflow: hidden;
-    text-transform: capitalize;
     text-overflow: ellipsis;
 }
 
@@ -242,4 +242,97 @@ body {
     font-size: 30px;
     display: block;
     font-weight: 700;
+}
+
+
+/**
+   * Media queries / Responsive
+   */
+
+@media only screen and (max-width: 1280px) {
+    .modal-container {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1160px) {
+    .main-content {
+        justify-content: center;
+    }
+
+    .movie {
+        max-width: 20%;
+    }
+
+    .movie-item>img {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-bar {
+        height: auto;
+        padding: 5px 15px 10px;
+    }
+
+    .nav-bar-container {
+        flex-direction: column;
+    }
+
+    .nav-search {
+        width: 100%;
+    }
+
+    .nav-search-input {
+        width: 100%;
+    }
+
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 0 15px 8rem;
+        grid-gap: 15px;
+        justify-content: space-around;
+    }
+
+    .movie {
+        max-width: 47%;
+    }
+
+    .movie-item>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-container {
+        max-width: 100%;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: inherit;
+        padding: 15px;
+        overflow: auto;
+    }
+
+    .close-modal {
+        top: 0;
+        right: 0;
+        border-radius: inherit;
+        border-color: #6ac045;
+    }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-body>img {
+        height: 270px;
+        object-fit: contain;
+        margin: 0 auto 20px;
+    }
 }
