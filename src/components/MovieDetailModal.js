@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import ReactDom from 'react-dom'
 import Axios from "axios"
+import CloseIconModal from "../assets/close_icon.svg"
 import { API_KEY } from "../App"
 
 const MovieDetailModal = props => {
@@ -20,7 +21,7 @@ const MovieDetailModal = props => {
             <div className="modal-overlay" />
             <div className="modal-container">
                 <button className="close-modal" onClick={() => { props.onClose(); props.onMovieSelect() }}>
-                    <img src="/assets/close_icon.svg" alt="icon close modal" />
+                    <img src={CloseIconModal} alt="icon close modal" />
                 </button>
                 {movieInfo ? (
                     <div className="modal-body">

@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import Axios from "axios"
 import MovieListItem from "./components/MovieListItem"
 import MovieDetailModal from "./components/MovieDetailModal"
+import SearchIcon from "./assets/search_icon.svg"
+import MovieIcon from "./assets/movie_icon.png"
 export const API_KEY = "faf7e5bb"
 
 export default function App() {
@@ -31,7 +33,7 @@ export default function App() {
                 <div className="nav-bar-container">
                     <div className="nav-logo">Movie App</div>
                     <div className="nav-search">
-                        <img src="/assets/search_icon.svg" alt="icon search" />
+                        <img src={SearchIcon} alt="icon search" />
                         <input
                             className="nav-search-input"
                             placeholder="Quick search"
@@ -53,7 +55,7 @@ export default function App() {
                         />
                     ))
                 ) : (
-                    <img className="movie-logo" src="/assets/movie_icon.png" alt="movie logo" />
+                    <img className="movie-logo" src={MovieIcon} alt="movie logo" />
                 )}
 
             </main>
