@@ -11,6 +11,7 @@ export default function App() {
     const [selectedMovie, onMovieSelect] = useState()
     const [isOpen, setIsOpen] = useState(false)
 
+    // fetch data from omdbapi if user typing in search box
     const fetchData = async (value) => {
         const response = await Axios.get(
             `https://www.omdbapi.com/?s=${value}&apikey=${API_KEY}`,
@@ -27,6 +28,7 @@ export default function App() {
 
     return (
         <>
+            {/* Header: logo and search box */}
             <header className="nav-bar">
                 <div className="nav-bar-container">
                     <div className="nav-logo">Movie App</div>
@@ -42,6 +44,7 @@ export default function App() {
                 </div>
             </header>
 
+            {/* Movie list item */}
             <main className="main-content">
                 {movieList?.length ? (
                     movieList.map((movie, index) => (
@@ -58,6 +61,7 @@ export default function App() {
 
             </main>
 
+            {/* Modal detail movie */}
             {selectedMovie && <MovieDetailModal selectedMovie={selectedMovie} onMovieSelect={onMovieSelect} open={isOpen} onClose={() => setIsOpen(false)} />}
         </>
     )

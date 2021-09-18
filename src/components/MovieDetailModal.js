@@ -7,12 +7,14 @@ const MovieDetailModal = props => {
     const { open, selectedMovie } = props
     const [movieInfo, setMovieInfo] = useState()
 
+    // fetch detail movie if user clicked movie list item
     useEffect(() => {
         Axios.get(
             `https://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`,
         ).then((response) => setMovieInfo(response.data))
     }, [selectedMovie])
 
+    // if user close modal this modal will be removed from the DOM
     if (!open) return null
 
     return ReactDom.createPortal(
@@ -43,6 +45,7 @@ const MovieDetailModal = props => {
             </div>
 
         </>,
+        // this element for container modal, so there is no conflict with elements other than modal popup
         document.getElementById('portal')
     )
 }
