@@ -1,4 +1,4 @@
-#![image1](https://github.com/januarmaksum/movie-app-react/assets/16111179/79344545-dd88-4ae5-8f7d-e33c9d2c96a7)
+![image1](https://github.com/januarmaksum/movie-app-react/assets/16111179/79344545-dd88-4ae5-8f7d-e33c9d2c96a7)
  Getting Started with Movie App React
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
